@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kevin Alcaraz - Home</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -18,41 +21,40 @@
       color: #333;
     }
 
-    /* Style the side navigation */
-    .sidenav {
-      height: 100%;
-      width: 250px;
-      position: fixed;
-      top: 0;
-      left: 0;
+    /* Style the Navbar */
+    .navbar {
       background-color: #333;
-      padding-top: 20px;
-      z-index: 1;
-      box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+      padding: 10px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .sidenav a {
-      display: block;
-      padding: 16px;
-      color: white;
+    .navbar-brand {
+      color: #ff5733;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .navbar-brand:hover {
+      color: #ff6f3a;
       text-decoration: none;
-      font-size: 18px;
-      margin-bottom: 10px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .sidenav a:hover {
-      background-color: #ff5733;
+    .navbar-nav .nav-link {
       color: white;
-      transform: translateX(10px);
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      transition: all 0.3s ease;
     }
 
-    .sidenav a.active {
-      background-color: #c13584;
+    .navbar-nav .nav-link:hover {
+      color: #ff5733;
+      background-color: rgba(255, 87, 51, 0.1);
+      border-radius: 5px;
     }
 
+    /* Content Styling */
     .content {
-      margin-left: 250px;
+      margin-top: 80px;
       padding: 20px;
     }
 
@@ -83,26 +85,6 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    /* Add a footer with contact info */
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    footer a {
-      color: #ff5733;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
     /* Animation for images */
     .animate-in {
       animation: fadeIn 2s ease-out;
@@ -122,29 +104,69 @@
 </head>
 <body>
 
-  <div class="sidenav">
-    <a href="index.html" class="active">Home</a>
-    <a href="About me.html">About Me</a>
-    <a href="Interests.html">Interests</a>
-    <a href="Hobbies.html">Hobbies</a>
-    <a href="Sites.html">My Favorite Sites</a>
-  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">Kevin Alcaraz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <!-- About Me -->
+        <li class="nav-item">
+          <a class="nav-link" href="About me.html">About Me</a>
+        </li>
+        <!-- Interests -->
+        <li class="nav-item">
+          <a class="nav-link" href="Interests.html">Interests</a>
+        </li>
+        <!-- Hobbies -->
+        <li class="nav-item">
+          <a class="nav-link" href="Hobbies.html">Hobbies</a>
+        </li>
+        <!-- My Favorite Sites -->
+        <li class="nav-item">
+          <a class="nav-link" href="Sites.html">My Favorite Sites</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- Content Section -->
   <div class="content">
     <h1>Welcome to My Website</h1>
     <p>This is the home page of a beginner programmer, Kevin Alcaraz. Explore more about me, my interests, hobbies, and favorite sites!</p>
     <p>This page was made as part of a test project to demonstrate my skills in HTML, CSS, and web development.</p>
+
+    <!-- Bootstrap Container for Images -->
+    <div class="container text-center mt-5">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img src="trex.png" alt="T-rex" class="img-fluid animate-in" style="max-width: 300px;">
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="https://www.istockphoto.com/photos/forest">
+            <img src="monkey.jpg" title="Teleport monkey button >:)" alt="Monkey" class="img-fluid animate-in" style="max-width: 200px;">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="cheese.html">
+            <img src="rat-dance.gif" title="Dancing Rat (click for surprise)" alt="Dancing Rat" class="img-fluid animate-in" style="max-width: 400px;">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Interactive Images with Animations -->
-  <div style="position: relative;">
-    <img src="trex.png" alt="T-rex" class="animate-in" style="width: 300px; height: 100px; position: absolute; left: 255px; top: 250px;">
-    <a href="https://www.istockphoto.com/photos/forest">
-      <img src="monkey.jpg" title="Teleport monkey button >:)" alt="Monkey" class="animate-in" style="width: 200px; height: 200px; position: absolute; left: 1500px; top: 225px;">
-    </a>
-    <a href="cheese.html">
-      <img src="rat-dance.gif" title="Dancing Rat (click for surprise)" alt="Dancing Rat" class="animate-in" style="width: 400px; height: 400px; position: absolute; left: 850px; top: 210px;">
-    </a>
-  </div>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
+
