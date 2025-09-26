@@ -26,7 +26,49 @@
     cursor: pointer;
     z-index: 1000;
     box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    transition: background-color 0.3s ease;
   }
 
   /* The arrow shape using CSS */
-  .back-arrow
+  .back-arrow::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 3px solid white;
+    border-top: none;
+    border-right: none;
+    transform: rotate(135deg);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover background color */
+  .back-arrow:hover {
+    background-color: #333;
+    animation: bounce 0.6s ease infinite;
+  }
+
+  /* Bounce keyframes */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-6px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-3px);
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-arrow" aria-label="Go back to Home"></a>
+
+</body>
+</html>
