@@ -1,69 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Hobbies</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Alcaraz - Hobbies</title>
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-/* Style the side navigation */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 70px; /* space for fixed navbar */
+    }
 
-/* Side navigation links */
-.sidenav a {
-  color: white;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-}
+    /* Navbar styling */
+    .navbar {
+      background-color: #2c3e50;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      padding: 0.8rem 1.5rem;
+    }
 
-/* Change color on hover */
-.sidenav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    .navbar-brand {
+      color: #e67e22 !important;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
 
-/* Style the content */
-.content {
-  margin-left: 200px;
-  padding-left: 20px;
-}
-</style>
+    .navbar-brand:hover {
+      color: #d35400 !important;
+      text-decoration: none;
+    }
+
+    .nav-link {
+      color: #ecf0f1 !important;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-radius: 0.3rem;
+    }
+
+    .nav-link:hover,
+    .nav-item.active .nav-link {
+      color: #f39c12 !important;
+      background-color: rgba(243, 156, 18, 0.15);
+    }
+
+    /* Content section */
+    .content {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 2rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .content p {
+      font-weight: 300;
+      font-size: 1.15rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    /* List of hobbies */
+    .hobbies-list {
+      list-style-type: none;
+      padding-left: 0;
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .hobbies-list li {
+      background: #f39c12;
+      color: white;
+      font-weight: 600;
+      padding: 12px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+
+    .hobbies-list li:hover {
+      background-color: #d35400;
+    }
+  </style>
 </head>
 <body>
 
-<div class="sidenav">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html">Kevin Alcaraz</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About me.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Interests.html">Interests</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="Hobbies.html">Hobbies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Sites.html">My Favorite Sites</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<a href="index.html">Home</a>
-<a href="About me.html">About Me</a>
-<a href="Interests.html">Interests</a>
-<a href="Hobbies.html">Hobbies</a>
-<a href="Sites.html">My Favorite Sites</a>
+  <!-- Main Content -->
+  <section class="content">
+    <h2>My Hobbies</h2>
+    <p>Here are some of the hobbies I enjoy during my free time.</p>
 
-</div>
+    <ul class="hobbies-list">
+      <li>Coding and programming</li>
+      <li>Playing video games</li>
+      <li>Watching movies and anime</li>
+    </ul>
+  </section>
 
-<div class="content">
-  <h2 style="text-align: center;">CSS Template</h2>
-  <p style="text-align: center;">A full-height, fixed sidenav and content.</p>
-</div>
-
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
