@@ -3,13 +3,30 @@
 <head>
 <title>Cheese</title>
 <style>
-body {
-  background-image: url('cheese.jfif');
-}
-</style>
-</head>
-<body>
+  body {
+    margin: 0;
+    background-image: url('cheese.jfif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
 
+  /* Back arrow container */
+  .back-arrow {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+  }
 
-</body>
-</html>
+  /* The arrow shape using CSS */
+  .back-arrow
